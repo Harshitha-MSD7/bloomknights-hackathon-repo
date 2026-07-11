@@ -10,7 +10,7 @@
 .bar ul
 {
     display: flex;
-    align-content: space-evenly;
+    align-content: space-between;
     justify-content: left;
     list-style-type: none;
     overflow: hidden;
@@ -22,12 +22,11 @@
     background-color: #F7F2FF;
     font-size: 13pt;
 
-    padding-bottom: 15px;
+    padding: 10px 0;        ;
     border-bottom: 2px solid #D5DBC1;
 }
 
 .bar ul li {
-    float: left;
     margin: 5px;
 }
 
