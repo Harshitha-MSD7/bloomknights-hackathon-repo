@@ -6,15 +6,35 @@
     box-sizing:border-box;
 }
 
+/*TOP*/
+.bar
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0px;
+    z-index: 1000;
+    background-color: #EDEDED;
+}
+
 body{
-    font-family:Arial, Helvetica, sans-serif;
+    padding-top: 45px;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive;;
     background:#f4f4f4;
+    color:#FF82D0;
 }
 
 .container{
     display:flex;
     height:100vh;
 }
+
 
 /* LEFT */
 
@@ -31,10 +51,16 @@ body{
     gap:20px;
 }
 
-.sidebar button{
-    width:60px;
-    height:60px;
-    font-size:24px;
+/*mood word */
+
+#mood-word
+{
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    font-size: 50px;
+    writing-mode: vertical-lr;
+    padding-top: 70px;
 }
 
 /* CENTER */
