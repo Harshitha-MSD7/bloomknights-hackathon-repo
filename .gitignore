@@ -7,3 +7,9 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Secrets - never commit the API key
+.env
+
+# Local database files (the backend recreates these automatically)
+*.db
