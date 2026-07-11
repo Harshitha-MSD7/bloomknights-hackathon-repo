@@ -1,6 +1,6 @@
 # BLoomknigts project by:
 # Alexandria Schmitz
-#
+# Harshitha Sathees Kumar
 #
 #
 
