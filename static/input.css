@@ -262,3 +262,25 @@ textarea:focus {
     padding-left: 20px;
 
 }
+
+/* delete button on each note card */
+.card {
+    position: relative;
+}
+
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #FF82D0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #CF59A2;
+}
