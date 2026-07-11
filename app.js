@@ -77,7 +77,7 @@ postButton.addEventListener("click", async () => {
 
 
 // -----------------------------
-// Analyze mood using Gemini
+// Analyze mood using Gemini  (result shows in #mood-word)
 // -----------------------------
 analyzeMoodButton.addEventListener("click", async () => {
     try {
