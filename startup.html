@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Create Your Profile</title>
+  <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+
+  <div class="container-1">
+    <h2> Welcome to Elpis</h2>
+      <div class="form-container">
+    <form id="profile-form" enctype="multipart/form-data">
+      <label>
+        Full name
+        <input type="text" name="name" id="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="email" id="email" required>
+      </label>
+        <label>
+        Password
+        <input type="password" name="password" id="password" required>
+      </label>
+
+      <label>
+        Short bio
+        <textarea name="bio" id="bio" rows="4"></textarea>
+      </label>
+<br>
+      <label>
+        Avatar
+        <input type="file" name="avatar" id="avatar" accept="image/*">
+      </label>
+<br>
+      <div>
+        <button type="submit">Save Profile</button>
+      </div>
+    </form>
+    </div>
+
+    <div id="message" aria-live="polite"></div>
+  </div>
+  <!--script src="static/profile.js"></script-->
+</body>
+</html>
