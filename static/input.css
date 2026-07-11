@@ -59,7 +59,7 @@
     font-size: 13pt;
 
 
-    padding: 10px 0;        ;
+    padding: 10px 0;
     border-bottom: 2px solid #D5DBC1;
 }
 
@@ -87,78 +87,23 @@
 
 body{
     padding-top: 45px;
-    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive;;
+    font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive;
     background-color:#E9E0FF;
     color:#FF82D0;
 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='30' viewBox='0 0 50 30'%3E%3Cpath d='M12 20a6 6 0 0 1 0-12 8 8 0 0 1 15-3 6 6 0 0 1 8 9 6 6 0 0 1-4 6z' fill='%23D5DBC1' fill-opacity='0.2'/%3E%3C/svg%3E");
     background-repeat: repeat;
     background-size: 50px 30px;
+    padding-bottom: 50px;
 }
 
 .container{
     display:flex;
     height:100vh;
+    padding-bottom: 50px;
 }
 
 
-/* LEFT */
-
-.sidebar{
-    width:180px;
-    border-right:2px solid #D5DBC1;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-
-    padding:20px;
-    gap:20px;
-
-    background-color: #FCFFF2;
-    background-image: repeating-linear-gradient(
-        45deg,
-        rgba(213, 219, 193, 0.15),
-        rgba(213, 219, 193, 0.15) 10px,
-        transparent 10px,
-        transparent 20px
-    );
-}
-
-/*mood word */
-
-#mood-word
-{
-    display: flex;
-    justify-content:center;
-    align-content: center;
-    font-size: 50px;
-    writing-mode: vertical-lr;
-    padding-top: 70px;
-}
-
-#analyzeMoodButton
-{
-    margin-top:20px;
-
-    padding-left: 10px;
-    padding-right: 10px;
-
-    height:45px;
-    background-color: white;
-    color: grey;
-    font-size:18px;
-    border-radius:15px;
-    border: 2px solid #D1D1D1;
-    cursor:pointer;
-
-}
-
-#analyzeMoodButton:hover
-{
-    background-color: #D1D1D1;
-
-}
 /* CENTER */
 
 .notes{
@@ -177,6 +122,7 @@ body{
 }
 
 .card{
+    position: relative;
     height:150px;
     background:white;
 
@@ -187,6 +133,24 @@ body{
     align-items:center;
 
     box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+/* delete button on each note card */
+.delete-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: #FF82D0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 3px 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background-color: #CF59A2;
 }
 
 /* RIGHT */
@@ -208,6 +172,7 @@ body{
     );
 
     padding:25px;
+
 }
 
 textarea{
@@ -231,7 +196,7 @@ textarea:focus {
 .post button{
     margin-top:20px;
 
-   padding: 5px 10px;
+    padding: 5px 10px;
 
     height:45px;
     background-color: white;
@@ -247,41 +212,49 @@ textarea:focus {
     background-color: #D1D1D1;
 }
 
-#AI-response
+
+/* BOTTOM BAR (Overview + Analyze Mood + result) */
+
+#geminiResponse
 {
     position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100pt;
-  background-color: #F7F2FF;
-  text-align: left;
-    margin-top: 20px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100pt;
+    background-color: #F7F2FF;
+    text-align: left;
     border-top: 2px solid #D5DBC1;
-
-    padding-left: 20px;
-
+    padding: 10px 20px;
 }
 
-/* delete button on each note card */
-.card {
-    position: relative;
+#geminiResponse ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    overflow: hidden;
 }
 
-.delete-btn {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background-color: #FF82D0;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    padding: 3px 8px;
-    font-size: 12px;
-    cursor: pointer;
+#analyzeMoodButton{
+    padding: 6px 14px;
+    background-color: #ffffff;
+    color: grey;
+    font-size:14px;
+    border-radius:15px;
+    border: 2px solid #D1D1D1;
+    cursor:pointer;
 }
 
-.delete-btn:hover {
-    background-color: #CF59A2;
+#analyzeMoodButton:hover
+{
+    background-color: #D1D1D1;
 }
 
+/* the AI summary text */
+#mood-word
+{
+    font-size: 15px;
+    color: black;
+    padding: 8px 0;
+}
