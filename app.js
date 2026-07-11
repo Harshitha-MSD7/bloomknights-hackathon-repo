@@ -1,6 +1,7 @@
 import {
     getMessages,
     postMessage,
+    deleteMessage,
     getSummary
 } from "./api.js";
 
@@ -9,7 +10,6 @@ import {
 const notesGrid = document.getElementById("notesGrid");
 const promptInput = document.getElementById("promptInput");
 const postButton = document.getElementById("postButton");
-const geminiResponse = document.getElementById("geminiResponse");
 const analyzeMoodButton = document.getElementById("analyzeMoodButton");
 const moodWord = document.getElementById("mood-word");
 
@@ -21,13 +21,31 @@ async function loadNotes() {
     try {
         const messages = await getMessages();
 
-        // Clear placeholder notes
         notesGrid.innerHTML = "";
 
         messages.forEach(message => {
             const card = document.createElement("div");
             card.className = "card";
-            card.textContent = message.text;
+
+            // the note text
+            const text = document.createElement("span");
+            text.textContent = message.text;
+            card.appendChild(text);
+
+            // delete button for this note
+            const deleteButton = document.createElement("button");
+            deleteButton.className = "delete-btn";
+            deleteButton.textContent = "Delete";
+            deleteButton.addEventListener("click", async () => {
+                try {
+                    await deleteMessage(message.id);
+                    loadNotes(); // refresh after deleting
+                } catch (error) {
+                    console.error(error);
+                }
+            });
+            card.appendChild(deleteButton);
+
             notesGrid.appendChild(card);
         });
 
@@ -51,14 +69,9 @@ postButton.addEventListener("click", async () => {
     try {
         await postMessage(text);
         promptInput.value = "";
-
-        // refresh notes
         loadNotes();
-
-        geminiResponse.textContent = "Post saved!";
-
     } catch (error) {
-        geminiResponse.textContent = error.message;
+        alert(error.message);
     }
 });
 
@@ -69,12 +82,9 @@ postButton.addEventListener("click", async () => {
 analyzeMoodButton.addEventListener("click", async () => {
     try {
         const result = await getSummary();
-
-        geminiResponse.textContent = result.summary;
         moodWord.textContent = result.summary;
-
     } catch (error) {
-        geminiResponse.textContent = error.message;
+        moodWord.textContent = error.message;
     }
 });
 
