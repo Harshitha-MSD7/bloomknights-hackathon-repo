@@ -163,6 +163,27 @@
   }
 }
 @layer utilities {
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
+  .grid {
+    display: grid;
+  }
   .table {
     display: table;
   }
@@ -191,6 +212,126 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bar ul {
+  display: flex;
+  align-content: space-evenly;
+  justify-content: left;
+  list-style-type: none;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #F7F2FF;
+  font-size: 13pt;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #D5DBC1;
+}
+.bar ul li {
+  float: left;
+  margin: 5px;
+}
+.bar ul li a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 5px;
+  color: #FF82D0;
+}
+.bar ul li a:hover {
+  color: #CF59A2;
+  border-radius: 5px;
+}
+body {
+  padding-top: 45px;
+  font-family: 'Comic Sans MS', 'Comic Sans', 'Chalkboard SE', 'Comic Neue', cursive;
+  background: #E9E0FF;
+  color: #FF82D0;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 180px;
+  background: #FCFFF2;
+  border-right: 2px solid #D5DBC1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+}
+#mood-word {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  font-size: 50px;
+  writing-mode: vertical-lr;
+  padding-top: 70px;
+}
+.notes {
+  flex: 1;
+  padding: 30px;
+}
+.notes h1 {
+  margin-bottom: 30px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 25px;
+}
+.card {
+  height: 150px;
+  background: white;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+.post {
+  width: 300px;
+  background: #FCFFF2;
+  border-left: 2px solid #D5DBC1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+textarea {
+  margin-top: 20px;
+  height: 250px;
+  resize: none;
+  padding: 10px;
+  border: 2px solid #CFCFCF;
+  border-radius: 15px;
+}
+textarea:focus {
+  background-color: white;
+  border-color: #8C8C8C;
+  outline: none;
+}
+.post button {
+  margin-top: 20px;
+  padding: 5px 10px;
+  height: 45px;
+  background-color: white;
+  color: grey;
+  font-size: 18px;
+  border-radius: 15px;
+  border: 2px solid #D1D1D1;
+  cursor: pointer;
+}
+.post button:hover {
+  background-color: #D1D1D1;
 }
 @property --tw-border-style {
   syntax: "*";
