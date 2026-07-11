@@ -1,8 +1,8 @@
 // BloomKnights API helper
 // Drop this file into the frontend project and call these functions.
-// The backend must be running at the BASE_URL below.
+// Points at the deployed backend on Render.
 
-const BASE_URL = "http://127.0.0.1:8000";
+const BASE_URL = "https://bloomknights-hackathon-repo.onrender.com";
 
 // Small helper: runs a request and returns the JSON.
 // If the backend sends an error, it throws with the friendly message.
