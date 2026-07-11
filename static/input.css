@@ -32,6 +32,14 @@
 #nav-icon:hover {
     color: #CF59A2;
 }
+
+#title-nav
+{
+    top: 40%;
+    left: 80%;
+
+}
+
 .bar ul
 {
     display: flex;
