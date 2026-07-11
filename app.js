@@ -1,13 +1,23 @@
-const button = document.getElementById("postButton");
-const input = document.getElementById("promptInput");
-const output = document.getElementById("geminiResponse");
+document.getElementById("signupForm").addEventListener("submit", async (event) => {
+    event.preventDefault();
 
-button.addEventListener("click", async () => {
-    const userText = input.value;
+    const user = {
+        username: document.getElementById("username").value,
+        email: document.getElementById("email").value,
+        password: document.getElementById("password").value
+    };
 
-    output.innerText = "Thinking...";
 
-    // Gemini API request goes here
+    const response = await fetch("http://localhost:3000/signup", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    });
 
-    output.innerText = "Gemini response goes here";
+
+    const result = await response.json();
+
+    console.log(result);
 });
