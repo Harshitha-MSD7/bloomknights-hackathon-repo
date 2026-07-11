@@ -1,8 +1,8 @@
-# This is a sample Python script.
-
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
+# BLoomknigts project by:
+# Alexandria Schmitz
+#
+#
+#
 
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
@@ -13,4 +13,4 @@ def print_hi(name):
 if __name__ == '__main__':
     print_hi('test')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
