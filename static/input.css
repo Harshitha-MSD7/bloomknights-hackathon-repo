@@ -24,8 +24,8 @@
     align-content: center;
     cursor: pointer;
 
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
 
 }
 
@@ -38,6 +38,7 @@
     position: relative;
     top: 40%;
     left: 80%;
+    color: #CF59A2;
 
 }
 
