@@ -146,7 +146,3 @@ analyzeMoodButton.addEventListener("click", async()=>{
 });
 
 
-
-
-// Load notes when page opens
-loadNotes();
