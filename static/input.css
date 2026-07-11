@@ -84,6 +84,28 @@ body{
     padding-top: 70px;
 }
 
+#analyzeMoodButton
+{
+    margin-top:20px;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    height:45px;
+    background-color: white;
+    color: grey;
+    font-size:18px;
+    border-radius:15px;
+    border: 2px solid #D1D1D1;
+    cursor:pointer;
+
+}
+
+#analyzeMoodButton:hover
+{
+    background-color: #D1D1D1;
+
+}
 /* CENTER */
 
 .notes{
