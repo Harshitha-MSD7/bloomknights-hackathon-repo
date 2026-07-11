@@ -7,6 +7,30 @@
 }
 
 /*TOP*/
+
+/* the centered icon */
+
+.bar
+{
+    position: relative;
+}
+#nav-icon {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FF82D0;
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+
+    
+
+}
+
+#nav-icon:hover {
+    color: #CF59A2;
+}
 .bar ul
 {
     display: flex;
@@ -43,6 +67,10 @@
     border-radius: 5px;
 }
 
+
+
+
+/*MAIN BODY*/
 
 body{
     padding-top: 45px;
