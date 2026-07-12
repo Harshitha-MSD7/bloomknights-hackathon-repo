@@ -114,7 +114,7 @@ def summarize_messages():
     client = genai.Client(api_key=api_key)
     try:
         response = client.models.generate_content(
-            model="gemini-flash-latest",
+            model="gemini-flash-lite-latest",
             contents=prompt,
         )
     except Exception as error:
